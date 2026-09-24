@@ -9,5 +9,9 @@ class ConfigurationError(Exception):
     """Raised this Exception when Configuration has error"""
     pass
 
+class APINotFoundError(Exception):
+    """Raised this Exception when API has error"""
+    pass
+
     
 
