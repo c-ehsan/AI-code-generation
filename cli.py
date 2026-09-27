@@ -11,15 +11,16 @@ class CLI:
 
     def run_app(self):
         print("---Code Generation Bot---")
-        while True:
-            print("\n1.Start")
-            print("0.Exit")
-            try:
+        print("\n1.Start")
+        print("0.Exit")
+        try:
                 order = int(input("Enter your choice: "))
 
-            except ValueError:
+        except ValueError:
                 print("Please enter a number.")
-                continue
+                return 
+        while True:
+
             if order==1:
                 query=input("Enter your Query:")
                 if   not query.strip():
@@ -27,8 +28,10 @@ class CLI:
                     continue
                 print("You:\n",query)
                 model_response=self.initializer.generate_code(query)
-                print("Take a moment ...")
+                print("BOT:\n")
+
                 try:
+                    print("Take a moment ...")
                     if  not model_response or model_response=="User Safety: safe" :
                         print("\nGeneration Failed try again later")
                         continue
@@ -37,8 +40,6 @@ class CLI:
                     print()
 
 
-
-                    # print("BOT:\n",model_response)
 
 
                 except Exception as e:
