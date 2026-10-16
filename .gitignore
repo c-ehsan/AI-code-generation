@@ -221,3 +221,6 @@ models/
 dataset/
 # Streamlit
 .streamlit/secrets.toml
+
+#PATHES 
+config.json
