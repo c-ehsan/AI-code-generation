@@ -1,10 +1,10 @@
-from base_generator import Generator
+from Core.base_generator import Generator
 import os 
-from exceptions import APINotFoundError
+from Core.exceptions import APINotFoundError
 from openai import OpenAI
 from dotenv import load_dotenv
-from Elapsed_time_func import ElapsedTimerFunction
-from prompt_builder import PromptBuilder
+from Core.Elapsed_time_func import ElapsedTimerFunction
+from Core.prompt_builder import PromptBuilder
 load_dotenv()
 class OpenRouterGenerator(Generator):
     
