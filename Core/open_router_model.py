@@ -30,7 +30,9 @@ class OpenRouterGenerator(Generator):
             response=self.client.chat.completions.create(
                 model="openrouter/free",
                 messages=PromptBuilder.build(query),
-                max_tokens=200,
+                max_tokens=8000,
+                temperature=0.3,
+                reasoning_effort="medium",
                 stream=True
 
             )
